@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Interstate Bus Time Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tracker-container">
+        <header>
+            <h1>🚏 Interstate Bus Live Tracker</h1>
+            <p>Real-time countdowns for MSRTC & TGSRTC services</p>
+        </header>
+
+        <main>
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <div class="input-group">
+                    <label for="bus-stand-select">Select Your Current Bus Stand:</label>
+                    <select id="bus-stand-select">
+                        <option value="">-- Choose a Bus Stand --</option>
+                        <option value="chandrapur">Chandrapur</option>
+                        <option value="ballarsha">Ballarsha (Ballarpur)</option>
+                        <option value="rajura">Rajura</option>
+                        <option value="gadchandur">Gadchandur</option>
+                        <option value="korpana">Korpana</option>
+                        <option value="pardi">Pardi</option>
+                        <option value="bela">Bela</option>
+                        <option value="jainath">Jainath</option>
+                        <option value="adilabad">Adilabad</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="route-direction-select">Select Direction / Way:</label>
+                    <select id="route-direction-select">
+                        <option value="all">All Directions</option>
+                        <option value="Adilabad Way">Going towards Adilabad (Adilabad Way)</option>
+                        <option value="Chandrapur Way">Going towards Chandrapur (Chandrapur Way)</option>
+                    </select>
+                </div>
+
+                <button id="calculate-btn" type="button">🔍 Check Arrival Details</button>
+            </section>
+
+            <!-- Results Dashboard -->
+            <section id="dashboard" class="dashboard" style="display: none;">
+                <h2 id="current-location-heading">Bus Schedule</h2>
+                <div class="bus-cards-container" id="bus-cards"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
